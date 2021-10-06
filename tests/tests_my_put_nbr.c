@@ -9,8 +9,8 @@ int my_put_nbr(int nb);
 
 int main()
 {
-    my_isneg(0);
-    my_isneg(42);
-    my_isneg(-2147483647);
+    my_put_nbr(42);
+    my_put_nbr(0);
+    my_put_nbr(-2147483647);
     return(0);
 }
