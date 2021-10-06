@@ -4,38 +4,36 @@
 ** File description:
 ** my_print_comb2
 */
+
 void my_putchar(char c);
 
-void my_second(void)
+int print(int x)
 {
-    int b = 2;
+    char str;
+    char str1;
 
-    for (int a = 1; b != 99; b++) {
-        if (a < 10)
-            my_putchar('0');
-        my_putchar(a);
-        if (b < 10)
-            my_putchar('0');
-        my_putchar( a + 1);
-        a = a + 1;
-    }
+    str = (x / 10) + 48;
+    str1 = (x % 10) + 48;
+    my_putchar(str);
+    my_putchar(str1);
+    return (0);
 }
 
 int my_print_comb2(void)
 {
     int b = 1;
-    int c = 0;
-    int d = 0;
-
-    for (int a = 0; b != 98; b++) {
-        if (b != 100) {
-            my_putchar(c);
-            my_putchar(d);
+    
+    for (int a = 0; a < 99; a++) {
+        b = a + 1;
+        for (; b < 100; b++) {
+            print(a);
+            my_putchar(' ');
+            print(b);
+            if (a != 98 || b != 99) {
+                my_putchar(',');
+                my_putchar(' ');
+            }
         }
-        if (b < 10)
-            my_putchar(a);
-        my_putchar(b);
     }
-    my_second();
     return (0);
 }
