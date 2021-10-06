@@ -28,7 +28,7 @@ int my_print_comb(void)
 {
     for (int a = '0'; a <= '7'; a++) {
         for (int b = '1'; b <= '8'; b++) {
-            yes(a, b);
+            comb(a, b);
         }
     }
     return (0);

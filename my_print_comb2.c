@@ -6,7 +6,7 @@
 */
 void my_putchar(char c);
 
-int my_second(void)
+void my_second(void)
 {
     int b = 2;
 
